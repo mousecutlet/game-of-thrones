@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Game of Thrones</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/icon_GOT.jpg" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <link href="css/agency.min.css" rel="stylesheet">
+
+  <script src="js/ms.js"></script>
+
+</head>
+
+<body id="page-top" onload="populateData()">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">Home</a>
+
+      
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+
+  
+
+  </header>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Reserve a Restroom</h2>
+          <h3 class="section-subheading text-muted">Green Restroom icon indicates available <br> Yellow Restroom icon indicates maintenance is ongoing <br>Red Restroom icon indicates occupied <br> </h3>
+          <button class="btn" data-toggle="modal" data-target="#ReserveModal" data-toggle="tooltip" data-placement="left" title="Refresh Status" value="Refresh" onclick="window.location.reload()">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-square fa-stack-2x text-primary"></i>
+              <i class="fas fa-sync-alt fa-stack-1x fa-inverse"></i>
+          </span></button>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <button class="btn" data-toggle="modal" data-target="#ReserveModal">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-square fa-stack-2x text-primary" style="color: green !important"></i>
+              <i class="fas fa-restroom fa-stack-1x fa-inverse"></i>
+          </span></button>
+          <p class="text-muted">SCU - Benson</p>
+          <p id="tplvlok" class="text-muted">TP Status - Level OK</p>
+          <p class="text-muted">Air Freshener Status - OK</p>
+        </div>
+        <div class="col-md-4">
+          <button class="btn" data-toggle="modal" data-target="#ReserveModal">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-square fa-stack-2x text-primary" style="color: green !important"></i>
+              <i class="fas fa-restroom fa-stack-1x fa-inverse"></i>
+          </span></button>
+          <p class="text-muted">SCU - Guadalupe Hall</p>
+          <p id="tplvlok" class="text-muted">TP Status - Level OK</p>
+          <p class="text-muted">Air Freshener Status - OK</p>
+        </div>
+        <div class="col-md-4">
+          <button class="btn" data-toggle="modal" data-target="#ReserveModal">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-square fa-stack-2x text-primary" style="color: green !important"></i>
+              <i class="fas fa-restroom fa-stack-1x fa-inverse"></i>
+          </span></button>
+          <p class="text-muted">SCU - Heafey Hall</p>
+          <p id="tplvlok" class="text-muted">TP Status - Level OK</p>
+          <p class="text-muted">Air Freshener Status - OK</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  
+
+  <!-- About -->
+  
+
+  
+
+  
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span class="copyright">Copyright © GameOfThrones</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+
+  <!-- Acknowledgement Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <h4 class="modal-title">Success!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Your request has been logged.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div class="portfolio-modal modal fade" id="ReserveModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Enter your details</h2>
+                
+              <form id="addrestroom" name="sentMessage" novalidate="novalidate">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>UserName</label>
+                      <input class="form-control" id="name" type="text" placeholder="UserName *" required="required" data-validation-required-message="Please enter your username.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                      <label>Time</label>
+                      <input class="form-control" id="email" type="time" placeholder="Local Time *" required="required" data-validation-required-message="Please enter a valid time.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    
+                  
+                  <div class="clearfix"></div>
+                  <div class="col-lg-12 text-center">
+                    <div id="success"></div>
+                    <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" data-dismiss="modal" type="submit" onclick="requestStall()">Add</button>
+                  </div>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="container">
+            <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <button class="btn" data-toggle="modal" data-target="#myModal" data-dismiss="modal" data-toggle="tooltip" data-placement="left" title="Toilet Paper">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-toilet-paper fa-stack-1x fa-inverse"></i>
+              </span></button>
+              <button class="btn" data-toggle="modal" data-target="#myModal" data-dismiss="modal" data-toggle="tooltip" data-placement="left" title="Spray Air Freshener">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-spray-can fa-stack-1x fa-inverse"></i>
+              </span></button>
+              <button class="btn" data-toggle="modal" data-target="#myModal" data-dismiss="modal" data-toggle="tooltip" data-placement="left" title="Cleanliness">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-broom fa-stack-1x fa-inverse"></i>
+              </span></button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="reserveStatus">
+    <!-- <p class="text-muted">Sorry, Request failed - Bathroom is full. Please try again later!</p> -->
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+  
+
+
+
+
+
+
+
+</body>
+
+</html>
